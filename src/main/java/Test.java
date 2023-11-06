@@ -1,5 +1,3 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 public class Test {
     public static void main(String[] args) {
 
@@ -11,10 +9,10 @@ public class Test {
         myArrayList.add(5);
         myArrayList.add(6);
         System.out.println(myArrayList.ToString());
-        myArrayList.remove(1);
+        myArrayList.remove(-3);
         System.out.println(myArrayList.ToString());
         System.out.println(myArrayList.size());
-        System.out.println(myArrayList.get(1).toString());
+        System.out.println(myArrayList.get(100).toString());
         myArrayList.clear();
         System.out.println(myArrayList.ToString());
 
@@ -61,7 +59,7 @@ public class Test {
         myHashMap.put("K",6);//
         myHashMap.put("L",6);
         myHashMap.put("M",6);
-        myHashMap.remove("K");
+        myHashMap.remove("A");
         myHashMap.Size();
         myHashMap.clear();
     }

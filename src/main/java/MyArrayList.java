@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Objects;
 
 public class MyArrayList<E> {
 
@@ -57,6 +58,12 @@ public class MyArrayList<E> {
 
     public void remove(int index) {
         final int newSize;
+        try {
+            Objects.checkIndex(index, size);
+        }catch (IndexOutOfBoundsException e){
+            System.out.println("Error: Index out of bounds");
+            return;
+        }
         if ((newSize = size - 1) > index)
             System.arraycopy(elementData, index + 1, elementData, index, newSize - index);
         elementData[size = newSize] = null;
@@ -72,6 +79,12 @@ public class MyArrayList<E> {
     }
 
     public Object get(int index) {
+        try {
+            Objects.checkIndex(index, size);
+        }catch (IndexOutOfBoundsException e){
+            System.out.println("Error: Index out of bounds");
+            return 0;
+        }
         return elementData[index];
     }
     public String ToString(){
